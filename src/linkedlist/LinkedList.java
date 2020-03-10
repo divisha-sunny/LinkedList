@@ -79,6 +79,10 @@ public class LinkedList {
             current.next = newNode;
         }
     }
+    public void ReverseLinkedList(Node node){
+        //No need of newnode here coz we are reversing
+        
+    }
 
     public void print(){
         Node current = head;
