@@ -22,5 +22,7 @@ public class Main {
         list.print();
         list.InsertAtMiddle(6);
         list.print();
+        list.ReverseLinkedList(list.head);
+        list.print();
     }
 }

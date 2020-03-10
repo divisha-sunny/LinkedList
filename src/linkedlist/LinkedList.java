@@ -1,7 +1,7 @@
 package linkedlist;
 
 public class LinkedList {
-    Node head;
+    public Node head;
     public LinkedList(Node head){
         this.head = head;
     }
@@ -79,10 +79,21 @@ public class LinkedList {
             current.next = newNode;
         }
     }
-    public void ReverseLinkedList(Node node){
+    public Node ReverseLinkedList(Node node){
         //No need of newnode here coz we are reversing
-        
+        Node prev = null;
+        Node current = node;
+        Node next = null;
+        while(current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = prev;
+        }
+        node = prev;
+        return node;
     }
+
 
     public void print(){
         Node current = head;
