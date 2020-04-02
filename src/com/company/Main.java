@@ -1,28 +1,30 @@
 package com.company;
 
 
-import linkedlist.LinkedList;
-import linkedlist.Node;
-
-import java.util.Scanner;
+import com.company.linkedlist.LinkedList;
+import com.company.linkedlist.Node;
+import com.company.linkedlist.sortedInsert;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code
         LinkedList list = new LinkedList(new Node(3));
-        list.insert(new Node(39));
-        list.insert(new Node(7));
-        list.insert(new Node(9));
+        list.insert(new Node(8));
+        list.insert(new Node(10));
         list.insert(new Node(15));
+        list.insert(new Node(18));
         list.print();
-        list.delete(69);
+        sortedInsert si = new sortedInsert(new Node(16));
+        si.insert(new Node(17));
+        list.print();
+        /*list.delete(69);
         list.print();
         list.insertAtMiddleSlowFastMethod(85);
         list.print();
         list.InsertAtMiddle(6);
-        list.print();
-        list.ReverseLinkedList(list.head);
-        list.print();
+        list.print();*/
+        /*list.ReverseLinkedList(list.head);
+        list.print();*/
     }
 }
