@@ -1,6 +1,7 @@
 package com.company;
 
 
+import com.company.linkedlist.DetectACycle;
 import com.company.linkedlist.LinkedList;
 import com.company.linkedlist.Node;
 import com.company.linkedlist.sortedInsert;
@@ -15,16 +16,18 @@ public class Main {
         list.insert(new Node(15));
         list.insert(new Node(18));
         list.print();
-        sortedInsert si = new sortedInsert(new Node(16));
+       /* sortedInsert si = new sortedInsert(new Node(16));
         si.insert(new Node(17));
-        list.print();
+        list.print();*/
         /*list.delete(69);
         list.print();
         list.insertAtMiddleSlowFastMethod(85);
         list.print();
         list.InsertAtMiddle(6);
         list.print();*/
-        /*list.ReverseLinkedList(list.head);
+       /* list.ReverseLinkedList(list.head);
         list.print();*/
+        DetectACycle dac = new DetectACycle(new Node(12));
+
     }
 }
