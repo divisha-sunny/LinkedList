@@ -52,6 +52,28 @@ public class LinkedList {
             slow.next = newNode;
         }
     }
+
+    public Node deleteAtMiddleSlowFastMethod(Node node){
+        Node slow;
+        Node fast;
+        if(head == null){
+            return null;
+        }
+        if(head.next == null){
+            return null;
+        }
+        //Here we should have a fast, slow and a previous pointer for deletion
+        slow = node;
+        fast = node;
+        Node prev = null;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            prev = slow;
+            slow = slow.next;
+        }
+        prev.next = slow.next;
+        return node;
+    }
     public void InsertAtMiddle(int data){
         if(head == null){
             head = new Node(data);
